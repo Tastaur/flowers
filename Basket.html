@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@next/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@next/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@next/css/ionic.bundle.css" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .amount-flower {
+            display: flex;
+            width: 110px;
+            text-align: center;
+            align-items: center;
+            margin-left: auto;
+            margin-right: 5px;
+        }
+
+        .basket-button {
+            --padding-end: 0px;
+            --padding-start: 0px;
+            text-align: start;
+            --background: #3247e6;
+
+        }
+
+        .basket-input {
+            text-align: end;
+        }
+
+        .title {
+            white-space: pre-wrap;
+            width: 140px;
+            font-size: 16px;
+        }
+
+        .subtitle {
+            color: #9acc0c;
+        }
+
+        ion-input {
+            --padding-end: 0px
+        }
+
+        .basket-button-icon {
+            margin-left: 15%;
+        }
+
+        ion-icon {
+            color: #9acc0c;
+        }
+
+        .label-container {
+            position: relative;
+            z-index: 55;
+        }
+    </style>
+
+
+</head>
+
+
+
+<body>
+    <ion-header>
+        <ion-toolbar class="toolbar">
+            <ion-buttons slot="start" class="back-button">
+                <img onclick="history.back()" class="arrowBack" src="assets/arrowBack.png"> </ion-buttons>
+            <ion-title class="header">
+                <div class="header-wrapper"> Корзина</div>
+            </ion-title>
+        </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+        <ion-list>
+
+            <ion-item lines='none'>
+                <ion-button (click)="onClick()" fill='clear'>
+                    <ion-icon slot="icon-only" name="close-circle" color='danger'></ion-icon>
+                </ion-button>
+                <ion-label>
+                    <div class="label-container">
+                        <h2 class='title'>Роза кустовая</h2>
+                        <p class="subtitle">54/шт.</p>
+                    </div>
+                </ion-label>
+                <div class="amount-flower">
+                    <ion-button onclick="minus('first-value', 5)" class='func-button-basket' fill='outline'>
+                        <ion-icon slot="icon-only" name="remove-outline"></ion-icon>
+                    </ion-button>
+                    <ion-input type="tel" value=5 id="first-value"></ion-input>
+                    <ion-button onclick="plus('first-value', 5)" class='func-button-basket' fill='outline'>
+                        <ion-icon slot="icon-only" name="add"></ion-icon>
+                    </ion-button>
+                </div>
+                <ion-checkbox></ion-checkbox>
+            </ion-item>
+
+            <ion-item lines='none'>
+                <ion-button (click)="onClick()" fill='clear'>
+                    <ion-icon slot="icon-only" name="close-circle" color='danger'></ion-icon>
+                </ion-button>
+                <ion-label>
+                    <div class="label-container">
+                        <h2 class='title'>Роза кустовая красно-жёлтая, 40 сантиметорв, Болгария</h2>
+                        <p class="subtitle">54/шт.</p>
+                    </div>
+                </ion-label>
+                <div class="amount-flower">
+                    <ion-button onclick="minus('second-value', 10)" class='func-button-basket' fill='outline'>
+                        <ion-icon slot="icon-only" name="remove-outline"></ion-icon>
+                    </ion-button>
+                    <ion-input type="tel" value=15 id="second-value"></ion-input>
+                    <ion-button onclick="plus('second-value', 10)" class='func-button-basket' fill='outline'>
+                        <ion-icon slot="icon-only" name="add"></ion-icon>
+                    </ion-button>
+                </div>
+                <ion-checkbox></ion-checkbox>
+            </ion-item>
+
+            <ion-item lines='none'>
+                <ion-button (click)="onClick()" fill='clear'>
+                    <ion-icon slot="icon-only" name="close-circle" color='danger'></ion-icon>
+                </ion-button>
+                <ion-label>
+                    <div class="label-container">
+                        <h2 class='title'>Гвоздика</h2>
+                        <p class="subtitle">14/шт.</p>
+                    </div>
+                </ion-label>
+                <div class="amount-flower">
+                    <ion-button onclick="minus('third-value', 20)" class='func-button-basket' fill='outline'>
+                        <ion-icon slot="icon-only" name="remove-outline"></ion-icon>
+                    </ion-button>
+                    <ion-input type="tel" value=100 id="third-value"></ion-input>
+                    <ion-button onclick="plus('third-value', 20)" class='func-button-basket' fill='outline'>
+                        <ion-icon slot="icon-only" name="add"></ion-icon>
+                    </ion-button>
+                </div>
+                <ion-checkbox></ion-checkbox>
+            </ion-item>
+
+            <ion-item lines='none'>
+                <ion-button (click)="onClick()" fill='clear'>
+                    <ion-icon slot="icon-only" name="close-circle" color='danger'></ion-icon>
+                </ion-button>
+                <ion-label>
+                    <div class="label-container">
+                        <h2 class='title'>Герань</h2>
+                        <p class="subtitle">34/шт.</p>
+                    </div>
+                </ion-label>
+                <div class="amount-flower">
+                    <ion-button onclick="minus('fourth-value', 15)" class='func-button-basket' fill='outline'>
+                        <ion-icon slot="icon-only" name="remove-outline"></ion-icon>
+                    </ion-button>
+                    <ion-input type="tel" value=33 id="fourth-value"></ion-input>
+                    <ion-button onclick="plus('fourth-value', 15)" class='func-button-basket' fill='outline'>
+                        <ion-icon slot="icon-only" name="add"></ion-icon>
+                    </ion-button>
+                </div>
+                <ion-checkbox></ion-checkbox>
+
+            </ion-item>
+
+            <ion-item lines='none'>
+                <ion-button (click)="onClick()" fill='clear'>
+                    <ion-icon slot="icon-only" name="close-circle" color='danger'></ion-icon>
+                </ion-button>
+                <ion-label>
+                    <div class="label-container">
+                        <h2 class='title'>Тюльпаны</h2>
+                        <p class="subtitle">12/шт.</p>
+                    </div>
+                </ion-label>
+                <div class="amount-flower">
+                    <ion-button onclick="minus('fifth-value', 25)" class='func-button-basket' fill='outline'>
+                        <ion-icon slot="icon-only" name="remove-outline"></ion-icon>
+                    </ion-button>
+                    <ion-input type="tel" value=200 id="fifth-value"></ion-input>
+                    <ion-button onclick="plus('fifth-value', 25)" class='func-button-basket' fill='outline'>
+                        <ion-icon slot="icon-only" name="add"></ion-icon>
+                    </ion-button>
+                </div>
+                <ion-checkbox></ion-checkbox>
+
+            </ion-item>
+
+            <ion-item lines='none'>
+                <ion-button (click)="onClick()" fill='clear'>
+                    <ion-icon slot="icon-only" name="close-circle" color='danger'></ion-icon>
+                </ion-button>
+                <ion-label>
+                    <div class="label-container">
+                        <h2 class='title'>Папоротник</h2>
+                        <p class="subtitle">29/шт.</p>
+                    </div>
+                </ion-label>
+                <div class="amount-flower">
+                    <ion-button onclick="minus('sixth-value',30)" class='func-button-basket' fill='outline'>
+                        <ion-icon slot="icon-only" name="remove-outline"></ion-icon>
+                    </ion-button>
+                    <ion-input type="tel" value=300 id="sixth-value"></ion-input>
+                    <ion-button onclick="plus('sixth-value',30)" class='func-button-basket' fill='outline'>
+                        <ion-icon slot="icon-only" name="add"></ion-icon>
+                    </ion-button>
+                </div>
+                <ion-checkbox></ion-checkbox>
+            </ion-item>
+
+            <ion-item lines='none'>
+                <ion-label>Cумма покупки: </ion-label>
+                <ion-input type="tel" value=0 id='total-amount' class="basket-input" readonly></ion-input>р.
+            </ion-item>
+
+            <ion-button (click)="toast()" onclick="toast()" class="basket-button" expand="block" fill="solid"
+                shape="round">
+                Отправить заказ менеджеру
+                <ion-icon slot="end" name="arrow-forward-outline" color="light" class="basket-button-icon"></ion-icon>
+            </ion-button>
+        </ion-list>
+
+    </ion-content>
+    <script>
+
+        // увелчиение колличества цветков id это id инпута num это число которое прибавляем
+        let plus = (id, num) => {
+            let value = document.getElementById(id).getAttribute('value')
+            let result = Number(value) + num
+            document.getElementById(id).setAttribute('value', result)
+        }
+
+        // уменьшение колличества цветков id это id инпута num это число на которое убавляем
+        let minus = (id, num) => {
+            let value = document.getElementById(id).getAttribute('value')
+            let result = value - num
+            if (result < 0) {
+                result = 0
+            }
+            document.getElementById(id).setAttribute('value', result)
+        }
+        // показывает тост
+        async function toast() {
+            const toast = document.createElement('ion-toast');
+            toast.message = 'Ваш профиль ещё не проверен модератором, дождитесь проверки.';
+            toast.duration = 2000;
+            toast.color = 'danger';
+
+            document.body.appendChild(toast);
+            return toast.present();
+        }
+    </script>
+
+
+</body>
+
+</html>

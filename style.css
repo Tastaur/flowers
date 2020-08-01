@@ -1,0 +1,232 @@
+
+@font-face{
+    src: url(assets/fonts/11952.ttf);
+    font-family: "Montserrat";
+}
+
+body{
+    font-family: "Montserrat";
+}
+a{
+    text-decoration: none;
+}
+
+.header{
+    font-family:  "Montserrat";
+    font-size: 20px;
+    font-weight: 200;
+    letter-spacing: 0.0125em;
+    padding-top: 9px;
+    padding-bottom: 0px;
+    padding-left: 40px
+}
+.toolbar{
+    height: 56px;
+    position: static;
+    top:0;
+}
+ion-label{
+    outline: none;
+}
+ion-item{
+    outline: none;
+
+}
+.button {
+    margin-top: 10px;
+}
+
+.bottomButton{
+    letter-spacing: 0.05em;
+
+}
+.headerEdit{
+    font-family: "Montserrat";
+    font-size: 17px;
+    font-weight: 200;
+    letter-spacing: 0.0125em;
+    padding-top: 9px;
+    padding-bottom: 0px;
+    padding-left: 40px
+}
+ion-button{
+    font-family: "Montserrat";
+    font-weight: 200;
+    outline: none;
+}
+/* for Popover */
+
+sup{
+    color:red;
+}
+.headerLong{
+    font-family: "Montserrat";
+    font-size: 14px;
+    font-weight: 200;
+    letter-spacing: 0.0125em;
+    padding-top: 9px;
+    padding-bottom: 0px;
+    padding-left: 40px
+}
+.headerLonger{
+    font-family: "Montserrat";
+    font-size: 13px;
+    font-weight: 200;
+    letter-spacing: 0.0125em;
+    padding-top: 9px;
+    padding-bottom: 0px;
+    padding-left: 40px
+}
+.my-custom-class .modal-wrapper {
+    --max-height: 30%;
+    position: absolute;
+    bottom: 0;
+    --backdrop-opacity: .8;
+    background: none;
+  }
+  .my-custom-class .popover-content {
+    --width: 90%;
+    position: fixed;
+    margin-top: -35%;
+
+  }
+
+  .popover-content.sc-ion-popover-ios {
+    border-radius: 10px;
+    margin-left: 4%;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+ion-header,
+ion-content,
+ion-item,
+ion-segment-button,
+.title,
+.subtitle,
+ion-back-button
+ {
+    font-family: "Montserrat";
+}
+.header-wrapper{
+    background: #9acc0c;
+    border-radius: 25px;
+    color: white;
+    height: 35px;
+    text-align: center;
+    padding: 6px 15px;
+    width: max-content;
+
+}
+.header-wrapper-longer{
+    background: #9acc0c;
+    border-radius: 25px;
+    color: white;
+    height: 35px;
+    text-align: center;
+    padding: 10px 6px;
+    width: max-content;
+
+}
+.header-wrapper-long{
+    background: #9acc0c;
+    border-radius: 25px;
+    color: white;
+    font-size: 14px;
+    height: 35px;
+    text-align: center;
+    padding: 8px 8px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+
+}
+ion-tab-button{
+    --color-selected:  #9acc0c;
+    margin-top: 38px;
+}
+.func-button{
+    --border-width: 1px;
+    --border-color: #9acc0c;
+    --border-radius: 50%;
+    height: 30px;    
+}
+.func-button-basket{
+    --border-width: 1px;
+    --border-color: #9acc0c;
+    --border-radius: 50%;
+    height: 25px;
+    --padding-end: 0;
+    --padding-start: 0;
+}
+ion-buttons{
+    width: 0;
+}
+ion-backdrop {
+    background-color: black;
+    --backdrop-opacity: .7;
+}
+.back-button {
+    width: 13px;
+    padding-top: 11px;
+    height: 20px;
+}

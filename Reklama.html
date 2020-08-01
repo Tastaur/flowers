@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рекламация</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@next/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@next/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@next/css/ionic.bundle.css" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .reklama-button-icon {
+            margin-left: 220px;
+        }
+
+        .reklama-button {
+            --padding-end: 0px;
+            --padding-start: 0px;
+            text-align: start;
+            --background: #3247e6;
+        }
+
+        .reklama-icon,
+        .reklama-label {
+            color: #9acc0c !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ion-header>
+        <ion-toolbar class="toolbar">
+            <ion-buttons slot="start" class="back-button">
+                <img onclick="history.back()" class="arrowBack" src="assets/arrowBack.png"> </ion-buttons>
+            <ion-title class="headerEdit">
+                <div class="header-wrapper">Рекламация</div>
+            </ion-title>
+        </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+        <ion-list>
+            <ion-item>
+                <ion-label position='stacked'>Жалоба</ion-label>
+                <ion-textarea placeholder="Напишите о вашей проблеме" rows='3'></ion-textarea>
+            </ion-item>
+            <ion-item lines='none'>
+                <ion-button expand="block" fill="clear" shape="round">
+                    <ion-icon slot="start" name="camera-outline" class="reklama-icon"></ion-icon>
+                </ion-button>
+                <ion-label class="reklama-label">Прикрепить фото</ion-label>
+            </ion-item>
+            <a href="MenuAuth.html">
+                <ion-button [routerLink]='"/tabs/menu-auth"' class="reklama-button" expand="block" fill="solid"
+                    shape="round">
+                    Отправить
+                    <ion-icon slot="end" name="arrow-forward-outline" class="reklama-button-icon"></ion-icon>
+                </ion-button>
+            </a>
+        </ion-list>
+
+    </ion-content>
+
+</body>
+
+</html>

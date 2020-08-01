@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новости</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@next/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@next/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@next/css/ionic.bundle.css" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        ion-content{
+            height: 91%;
+        }
+        ion-card{
+            width: 100%;
+        }
+        ion-card-title {
+            font-size: 24px;
+            color: #9acc0c;
+        }
+
+        ion-card-subtitle {
+            font-size: 14px;
+        }
+
+        .panel {
+            padding-left: 20px;
+            
+        }
+        .panel p{
+            margin: 0;
+        }
+
+        .hide {
+            display: none;
+        }
+        .button-icon{
+            margin-left: 57%;
+        }
+        .about-button{
+            font-size: 18px;
+        }
+        .button-icon-hide {
+    margin-left: 70%;
+}
+    </style>
+</head>
+
+<body>
+    <ion-header>
+        <ion-toolbar class="toolbar">
+            <ion-buttons class="backButton" slot="start" text="Назад">
+                <ion-back-button text='Назад'></ion-back-button>
+            </ion-buttons>
+            <ion-title class="header">
+                <div class="header-wrapper">Новости</div>
+            </ion-title>
+        </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+        <ion-list>
+
+            <ion-item lines='none'>
+                <ion-card>
+                    <ion-img src='assets/f3.png' alt=""></ion-img>
+                    <ion-card-header>
+                        <ion-card-subtitle>20.05.2020 11:00</ion-card-subtitle>
+                        <ion-card-title class="news-title">Поступление</ion-card-title>
+                    </ion-card-header>
+                    <div class="panel hide" id="panel">
+                        <p class="news-title">С 21 мая 2020 года </br>
+                            мы работаем с 10:00 до 20:00 без перерывов и выходных
+                        </p>
+                    </div>
+                 
+                 <ion-button onclick="accordion('panel','first-acc')" class="about-button" id='first-acc' expand="full" fill="solid" shape="fill">
+                    Подробнee
+                    <ion-icon slot="end" name="chevron-forward-outline" class="button-icon"></ion-icon>
+                 </ion-button>
+
+                </ion-card>
+            </ion-item>
+
+            <ion-item lines='none'>
+                <ion-card>
+                    <ion-img src='assets/f2.png' alt=""></ion-img>
+                    <ion-card-header>
+                        <ion-card-subtitle>10.05.2020 11:00</ion-card-subtitle>
+                        <ion-card-title class="news-title">Новое время работы</ion-card-title>
+                    </ion-card-header>
+                    <div class="panel hide" id="panel-sec">
+                        <p class="news-title">С 21 мая 2020 года </br>
+                            мы работаем с 10:00 до 20:00 без перерывов и выходных
+                        </p>
+                    </div>
+                 
+                 <ion-button onclick="accordion('panel-sec','second-acc')" class="about-button" id='second-acc' expand="full" fill="solid" shape="fill">
+                    Подробнee
+                    <ion-icon slot="end" name="chevron-forward-outline" class="button-icon"></ion-icon>
+                 </ion-button>
+                </ion-card>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+
+    <script>
+        // показывание скрывание новости
+        let accordion = (id, btn) => {
+            let panel = document.getElementById(id) // панель текста
+            let accBtn = document.getElementById(btn) // кнопка
+            console.log(panel, accBtn)
+            if (panel.classList.contains('hide') === false) {
+                panel.classList.add('hide')
+            } else {
+                panel.classList.remove('hide')
+            }
+            if (accBtn.innerHTML.includes('Подробнee') ==true) {
+                accBtn.innerHTML = "Скрыть  <ion-icon slot='end' name='chevron-up-outline' class='button-icon-hide'></ion-icon>"
+            } else {
+                accBtn.innerHTML = "Подробнee <ion-icon slot='end' name='chevron-forward-outline' class='button-icon'></ion-icon>"
+            }
+        }
+
+    </script>
+</body>
+
+</html>

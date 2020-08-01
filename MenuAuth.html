@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@next/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@next/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@next/css/ionic.bundle.css" />
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <style>
+        .title {
+            white-space: pre-wrap;
+            font-family: "Montserrat";
+
+        }
+
+        a {
+            color: black;
+        }
+    </style>
+    <ion-header>
+        <ion-toolbar class="toolbar">
+            <ion-buttons class="backButton" slot="start" text="Назад">
+                <ion-back-button text='Назад'></ion-back-button>
+            </ion-buttons>
+            <ion-title class="header">
+                <div class="header-wrapper"> Меню </div>
+            </ion-title>
+        </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+        <ion-list>
+
+            <a href="Index.html">
+                <ion-item [routerLink]='"/auth"'>
+                    <ion-label class='title'>Выход</ion-label>
+                </ion-item>
+            </a>
+
+            <a href="CreateProfile.html">
+                <ion-item [routerLink]='"/create-profile"'>
+                    <ion-label class='title'>Редактирование профиля </ion-label>
+                </ion-item>
+            </a>
+
+
+            <a href="Notification.html">
+                <ion-item [routerLink]='"/notifications"'>
+                    <ion-label class='title'>Уведомления</ion-label>
+                </ion-item>
+            </a>
+            <a href="MyApp.html">
+                <ion-item [routerLink]='"/my-app"'>
+                    <ion-label class='title'>Мои заказы</ion-label>
+                </ion-item>
+            </a>
+
+            <a href="Info.html">
+                <ion-item [routerLink]='"info"'>
+                    <ion-label class='title'>Общая информация</ion-label>
+                </ion-item>
+            </a>
+            
+            <a href="Reklama.html">
+            <ion-item [routerLink]='"reklama"'>
+                <ion-label class='title'>Рекламация</ion-label>
+            </ion-item>
+            </a>
+
+            <a href="Basket.html">
+            <ion-item [routerLink]='"basket"'>
+                <ion-label class='title'>Корзина</ion-label>
+            </ion-item>
+            </a>
+
+            <a href="Agreement.html">
+            <ion-item [routerLink]='"/agreement"'>
+                <ion-label class='title'>Пользовательское соглашение</ion-label>
+            </ion-item>
+            </a>
+
+
+        </ion-list>
+    </ion-content>
+</body>
+
+</html>

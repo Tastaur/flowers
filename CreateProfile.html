@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Редактировать профиль</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@next/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@next/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@next/css/ionic.bundle.css" />
+    <link rel="stylesheet" href="style.css">
+    <script type="module">
+        import { alertController } from 'https://cdn.jsdelivr.net/npm/@ionic/core@next/dist/ionic/index.esm.js';
+        window.alertController = alertController;
+    </script>
+</head>
+
+<body>
+    <style>
+        .long {
+            font-size: 10px;
+        }
+
+        .profile-button {
+            position: fixed;
+            bottom: 0;
+            width: 92%;
+            margin-left: 4%;
+            --background: #3247e6;
+            --border-radius: 20px;
+            --padding-start: 0;
+            --padding-end: 0;
+        }
+
+        .button-icon {
+            margin-left: 57%;
+        }
+    </style>
+    <ion-header>
+        <ion-toolbar class="toolbar">
+            <ion-buttons slot="start" class="back-button">
+                <img onclick="history.back()" class="arrowBack" src="assets/arrowBack.png"> </ion-buttons>
+            <ion-title class="headerLonger">
+                <div class="header-wrapper-longer"> Редактирование профиля</div>
+            </ion-title>
+        </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+        <ion-list>
+
+            <ion-item>
+                <ion-label position='stacked'>Фамилия</ion-label>
+                <ion-input autocapitalize="on" type='text' placeholder='Введите фамилию'></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position='stacked'>Имя</ion-label>
+                <ion-input autocapitalize="on" type='text' placeholder='Введите имя'></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position='stacked'>Отчество</ion-label>
+                <ion-input autocapitalize="on" type='text' placeholder='Введите отчество'></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position='stacked'>Город</ion-label>
+                <ion-input autocapitalize="on" type='text' placeholder='Введите название города'></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position='stacked'>E-mail</ion-label>
+                <ion-input type='email' placeholder='Введите e-mail'></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position='stacked'>Название компании</ion-label>
+                <ion-input autocapitalize="on" type='text' placeholder='Введите название компании'></ion-input>
+            </ion-item>
+
+
+
+        </ion-list>
+
+        <ion-button onclick="alert()" [routerLink]='"/tabs/menu-auth"' expand='block' fill="solid"
+            class="profile-button">
+            Сохранить
+            <ion-icon slot="end" name="arrow-forward-outline" color="light" class="button-icon"></ion-icon>
+        </ion-button>
+
+    </ion-content>
+
+    <script>
+        //показывает алерт
+        function alert() {
+            const alert = document.createElement('ion-alert');
+            alert.message = 'Ваши данные отправлены на модерацию. Заказ станет доступным после проверки профиля модератором';
+            alert.buttons = [
+                {
+                    text: 'ОК',
+                    // функция которое будет по кнопке, пока стоит ссылка на локальный файл
+                    handler: () => {
+                        document.location.href = 'file:///C:/Users/Admin/Desktop/Work/flower-site/MenuAuth.html'
+                    }
+                }
+            ];
+
+            document.body.appendChild(alert);
+            return alert.present();
+        }
+    </script>
+</body>
+
+</html>

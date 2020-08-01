@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@next/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@next/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@next/css/ionic.bundle.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <style>
+        .input {
+            --padding-top: 8px;
+            --padding-bottom: 7px;
+            --padding-start: 9px;
+            border-radius: 10px;
+        }
+
+        .button {
+            margin-top: 10px;
+        }
+
+        .authBackground {
+            height: 100px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .authContainer {
+            margin-top: 30%;
+            height: fit-content;
+            border-radius: 20px;
+            width: 90%;
+            text-align: center;
+            padding-bottom: 15px;
+        }
+
+        .inputContainer {
+            width: 93%;
+        }
+
+        .input {
+            padding: 3px 5px;
+            --padding-top: 8px;
+            --padding-bottom: 7px;
+            --padding-start: 9px;
+        }
+
+        .button {
+            border-radius: 20px;
+        }
+
+        .authBackground {
+            height: 100px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .authContainer {
+            margin-top: 5%;
+            height: fit-content;
+            border-radius: 20px;
+            width: 90%;
+            text-align: left;
+            padding-bottom: 15px;
+        }
+
+        .img {
+            height: 100px;
+            margin-top: -80px;
+            background-color: #ffffff;
+        }
+
+        .inputContainer {
+            text-align: start;
+            width: 86%;
+            margin-left: 12px;
+        }
+
+        ion-button {
+            margin: 20px 15px;
+            --background: #9acc0c;
+            --padding-start: 0px;
+            --padding-end: 0px;
+            --background-activated: #bffc17;
+        }
+
+        .checkboxContainer {
+            margin-left: 7%;
+            display: flex;
+            margin-top: -10px;
+            align-items: center;
+        }
+
+        .checkboxLabel {
+            margin-top: 16px;
+            outline: none;
+            text-decoration: none;
+            color: black;
+        }
+
+        ion-checkbox {
+            outline: none;
+            margin-right: 5px;
+        }
+
+        .inputLabel {
+            margin-bottom: 5px;
+            font-size: 12px;
+        }
+
+        .authInput {
+            --borderd-width: 1px
+        }
+
+        .logo {
+            width: 100%;
+        }
+
+        .auth-button-icon {
+            margin-left: 70%;
+        }
+
+        .auth-text {
+            margin-left: 30px;
+        }
+    </style>
+    <ion-header>
+        <ion-toolbar class="toolbar">
+            <ion-buttons class="backButton" slot="start">
+                <ion-back-button text=''></ion-back-button>
+            </ion-buttons>
+            <ion-title class="header">
+                Авторизация</ion-title>
+        </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+        <img src="assets/logo.png" class="logo" alt="">
+        <div class="authBackground">
+            <div class="authContainer">
+                <div class="authField">
+                    <ion-text color="dark">
+                        <h1 class='auth-text'>Авторизация</h1>
+                    </ion-text>
+                    <ion-text color="dark">
+                        <p class='auth-text'>Телефон</p>
+                    </ion-text>
+                    <ion-item class="inputContainer">
+                        <ion-label> +7</ion-label>
+                        <ion-input type="tel" maxLength='10' value="9372000000" disabled class="authInput"></ion-input>
+                    </ion-item>
+                    <ion-text color="dark">
+                        <p class='auth-text'>СМС-код</p>
+                    </ion-text>
+                    <ion-item class="inputContainer">
+                        <ion-input type="tel" placeholder="ХXX-ХXX" class="authInput"></ion-input>
+                    </ion-item>
+                    <a href="MenuAuth.html">
+                        <ion-button (click)="onClick()" expand="block" сlass='auth-button' fill="solid" shape="round"
+                            [routerLink]="'/tabs/menu-auth'">
+                            Войти
+                            <ion-icon slot="end" name="arrow-forward-outline" class="auth-button-icon"></ion-icon>
+                        </ion-button>
+                    </a>
+                    <div class="checkboxContainer" lines='none'>
+                        <ion-checkbox class="checkbox"></ion-checkbox>
+                        <ion-label>
+                            <a href='Agreement.html' class="checkboxLabel"> Пользовательское соглашение</a>
+                        </ion-label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</body>
+
+</html>

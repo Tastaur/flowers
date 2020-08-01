@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>История</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@next/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@next/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@next/css/ionic.bundle.css" />
+    <link rel="stylesheet" href="style.css">
+    <script type="module">
+        import { popoverController } from 'https://cdn.jsdelivr.net/npm/@ionic/core@next/dist/ionic/index.esm.js';
+        window.popoverController = popoverController;
+        import { modalController } from 'https://cdn.jsdelivr.net/npm/@ionic/core@next/dist/ionic/index.esm.js';
+        window.modalController = modalController;
+    </script>
+    <style>
+        .sc-ion-modal-ios-h {
+            --height: 23%;
+            place-items: flex-end;
+        }
+
+        .item-button {
+            --background: #3247e6;
+            margin-left: 15px;
+            --border-radius: 20px;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .history-button {
+            position: sticky;
+            top: 10px;
+            width: 92%;
+            margin-left: 4%;
+            --background: #3247e6;
+            --border-radius: 20px;
+            --padding-start: 0;
+            --padding-end: 0;
+            z-index: 5555555;
+        }
+
+        .button-icon {
+            margin-left: 57%;
+        }
+
+        .flower-icon {
+            color: #9acc0c;
+        }
+
+        ion-content {
+            height: 92%;
+        }
+
+        .my-custom-class .popover-content {
+            background: #222;
+        }
+
+        .sc-ion-popover-ios-h {
+            --width: 327px;
+            margin-top: -24%;
+            --max-height: 90%;
+            --box-shadow: none;
+            --backdrop-opacity: var(--ion-backdrop-opacity, 0.08);
+        }
+
+        .cancel-button {
+            width: 33%;
+        }
+
+        .button-container {
+            display: flex;
+            width: 100%;
+            justify-content: space-evenly;
+        }
+
+        .input-container {
+            width: 200px;
+            margin: 0 auto;
+        }
+
+        .add-input {
+            text-align: center;
+        }
+
+        .flower-icon {
+            color: #9acc0c;
+        }
+
+        .func-button {
+            --border-width: 1px;
+            --border-color: #9acc0c;
+            --border-radius: 50%;
+            height: 30px;
+        }
+
+        .buy-button {
+            width: 43%;
+            height: 40px;
+        }
+
+        .add-header {
+            font-family: "Montserrat";
+            font-size: 14px;
+            font-weight: 200;
+            letter-spacing: 0.0125em;
+            padding-top: 9px;
+            padding-bottom: 0px;
+
+        }
+
+        .add-toolbar {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <ion-header>
+        <ion-toolbar class="toolbar">
+            <ion-title class="headerEdit">
+                <div class="header-wrapper-long">История сканирования</div>
+            </ion-title>
+        </ion-toolbar>
+    </ion-header>
+
+    <ion-content [scrollEvents]="true" id='ion-content'>
+
+        <a href="Basket.html">
+            <ion-button [routerLink]='"/tabs/menu-auth/basket"' expand='block' fill="solid" class="history-button">
+                В корзину
+                <ion-icon slot="end" name="arrow-forward-outline" color="light" class="button-icon"></ion-icon>
+            </ion-button>
+        </a>
+
+
+        <ion-card>
+            <ion-img src="assets/f2.png" class="flower-img" alt="" onclick='showImg()'></ion-img>
+            <ion-card-header>
+                <ion-card-title>Герань</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+                <b>Дата доставки:</b> 22.07.2020 <br>
+                <b>Доступный остаток:</b> 1 <br>
+            </ion-card-content>
+            <ion-button class="item-button" onclick="buy()" fill="solid" size='default'>
+                от 154 &#8381; / шт.
+            </ion-button>
+        </ion-card>
+
+        <ion-card>
+            <ion-img src="assets/f3.png" class="flower-img" alt="" onclick='showImg()'></ion-img>
+            <ion-card-header>
+                <ion-card-title>Роза</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+                <b>Дата доставки:</b> 23.07.2020 <br>
+                <b>Доступный остаток:</b> 15 <br>
+            </ion-card-content>
+            <ion-button class="item-button" onclick="buy()" fill="solid" size='default'>
+                от 89 &#8381; / шт.
+            </ion-button>
+        </ion-card>
+
+        <ion-card>
+            <ion-img src="assets/f1.png" class="flower-img" alt="" onclick='showImg()'></ion-img>
+            <ion-card-header>
+                <ion-card-title>Хризантема</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+                <b>Дата доставки:</b> 30.07.2020 <br>
+                <b>Доступный остаток:</b> 20 <br>
+            </ion-card-content>
+            <ion-button class="item-button" onclick="buy()" fill="solid" size='default'>
+                от 54 &#8381; / шт.
+            </ion-button>
+        </ion-card>
+
+        <ion-fab horizontal="end" onclick="ScrollToTop()" vertical="bottom" slot="fixed">
+            <ion-fab-button color="light">
+                <ion-icon class="flower-icon" name="chevron-up-outline"></ion-icon>
+            </ion-fab-button>
+        </ion-fab>
+
+    </ion-content>
+
+    <script>
+
+        // Поднимает наверх
+        let ScrollToTop = () => {
+            let content = document.getElementById('ion-content')
+            content.scrollToTop(1500);
+        }
+
+        // Показывает картинку
+        let currentPopover = null;
+        async function showImg(ev) {
+            popover = await popoverController.create({
+                component: 'image-page',
+                event: ev,
+                translucent: true
+            });
+            currentPopover = popover;
+            return popover.present();
+        }
+
+        function dismissPopover() {
+            if (currentPopover) {
+                currentPopover.dismiss().then(() => { currentPopover = null; });
+            }
+        }
+
+        customElements.define('image-page', class ModalContent extends HTMLElement {
+            connectedCallback() {
+                this.innerHTML = `
+                <ion-img src="assets/f2.png" onclick='dismissPopover()' class="flower-img" alt=""></ion-img>
+    `;
+            }
+        });
+
+
+        // Добавление в корзину
+        let currentModal = null;
+        async function buy() {
+            const modal = await modalController.create({
+                component: 'add-basket'
+            });
+
+            await modal.present();
+            currentModal = modal;
+        }
+
+        function cancel() {
+            if (currentModal) {
+                currentModal.dismiss().then(() => { currentModal = null; });
+            }
+        }
+        customElements.define('add-basket', class ModalContent extends HTMLElement {
+            connectedCallback() {
+                this.innerHTML = `
+                <ion-header>
+                    <ion-toolbar class="toolbar add-toolbar">
+                        <ion-title class="add-header">
+                         Добавить в корзину</ion-title>
+                    </ion-toolbar>
+                  </ion-header>
+
+            <ion-content>
+            <ion-item lines='none'>
+                <ion-label><h2>54 &#8381; за шт.</h2>  </ion-label>
+                <ion-button [routerLink]="'/tabs/menu-auth/basket'" onclick="cancel()" class="buy-button" fill="solid"
+                shape="round">
+                Купить 10  шт.
+            </ion-button>
+            </ion-item>
+
+            <div class="button-container">
+                <ion-button onclick="cancel()" class='cancel-button' fill="outline" color='success' shape="round">
+                Отменить
+                </ion-button>
+            </div>
+
+            </ion-content>
+        `;
+            }
+        });
+    </script>
+</body>
+
+
+
+</html>

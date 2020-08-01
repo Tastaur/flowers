@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Уведомления</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@next/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@next/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@next/css/ionic.bundle.css" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .title {
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+
+<body>
+    <ion-header>
+        <ion-toolbar class="toolbar">
+            <ion-buttons slot="start" class="back-button">
+                <img onclick="history.back()" class="arrowBack" src="assets/arrowBack.png"> </ion-buttons>
+            <ion-title class="header">
+                <div class="header-wrapper">Уведомления</div>
+            </ion-title>
+        </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+        <ion-list>
+
+            <ion-item>
+                <ion-label>
+                    <p>13.07.2020 15:00</p>
+                    <h2 class="title">Профиль пользователя заблокирован</h2>
+                </ion-label>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>
+                    <p>13.07.2020 13:00</p>
+                    <h2 class="title">В магазине "Мир Цветов" новое поступление товара.</h2>
+                </ion-label>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>
+                    <p>12.07.2020 13:00</p>
+                    <h2 class="title">В магазине "Flower's" началась распродажа.</h2>
+                </ion-label>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>
+                    <p>11.07.2020 15:00</p>
+                    <h2 class="title">В магазине "Цветочный рай" изменился график работы.</h2>
+                </ion-label>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>
+                    <p>10.07.2020 12:00</p>
+                    <h2 class="title">"Цветник" открыл новый магазин по адресу: г. Тольятти, Тополиная 1.</h2>
+                </ion-label>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>
+                    <p>09.07.2020 13:00</p>
+                    <h2 class="title">В магазине "Flower's" новое поступление товара.</h2>
+                </ion-label>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>
+                    <p>08.07.2020 13:00</p>
+                    <h2 class="title">В магазине "Мир Цветов" началась распродажа.</h2>
+                </ion-label>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>
+                    <p>10.07.2020 12:00</p>
+                    <h2 class="title">"Flower's" открыл новый магазин по адресу: г. Тольятти, Гидротехническая 8.</h2>
+                </ion-label>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>
+                    <p>01.07.2020 11:00</p>
+                    <h2>Профиль пользователя одобрен</h2>
+                </ion-label>
+            </ion-item>
+
+        </ion-list>
+    </ion-content>
+
+</body>
+
+</html>
