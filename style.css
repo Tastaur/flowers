@@ -201,9 +201,12 @@ ion-back-button
 
 }
 ion-tab-button{
-    --color-selected:  #9acc0c;
-    margin-top: 38px;
+    --color-selected: #9acc0c;
+    font-size: 11px;
+    margin-top: 20px;
+    --color: black;
 }
+
 .func-button{
     --border-width: 1px;
     --border-color: #9acc0c;
@@ -229,4 +232,30 @@ ion-backdrop {
     width: 13px;
     padding-top: 11px;
     height: 20px;
+}
+ion-tab-bar{
+    height: 80px;
+}
+.skan-button img{
+    height: 50px;
+}
+.skan-button{
+    margin: 0;
+}
+.tab-label{
+    font-size: 11px;
+}
+.custom-tab-button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+    font-size: 14px;
+    margin-top: 20px;
+}
+.tab-img{
+    height: 30px;
+}
+a{
+    color: black;
 }

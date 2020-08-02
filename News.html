@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="style.css">
     <style>
         ion-content{
-            height: 91%;
+            height: 80%;
         }
         ion-card{
             width: 100%;
@@ -105,6 +105,35 @@
             </ion-item>
         </ion-list>
     </ion-content>
+    <ion-tab-bar slot="bottom">
+
+        <a href="Flowers.html" class="custom-tab-button">
+            <img src="assets/rose-outline.svg" class="tab-img">
+            <ion-label>Цветы</ion-label>
+        </a>
+
+        <a href="News.html" class="custom-tab-button">
+            <img src="assets/newspaper-outline.svg" class="tab-img">
+            <ion-label>Новости</ion-label>
+        </a>
+
+        <ion-tab-button (click)='scanCode()' class="skan-button" tab="skaner">
+            <img src="assets/scan.png" alt="">
+            <ion-label class="skan-label">Сканировать</ion-label>
+
+        </ion-tab-button>
+
+        <a href="History.html" class="custom-tab-button">
+            <img src="assets/time-outline.svg" class="tab-img">
+            <ion-label>История</ion-label>
+        </a>
+
+        <a href="MenuAuth.html" class="custom-tab-button">
+            <img src="assets/menu-outline.svg" class="tab-img">
+            <ion-label>Меню</ion-label>
+        </a>
+    </ion-tab-bar>
+
 
     <script>
         // показывание скрывание новости

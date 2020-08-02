@@ -23,6 +23,10 @@
         a {
             color: black;
         }
+
+        ion-content {
+            height: 80%;
+        }
     </style>
     <ion-header>
         <ion-toolbar class="toolbar">
@@ -67,28 +71,57 @@
                     <ion-label class='title'>Общая информация</ion-label>
                 </ion-item>
             </a>
-            
+
             <a href="Reklama.html">
-            <ion-item [routerLink]='"reklama"'>
-                <ion-label class='title'>Рекламация</ion-label>
-            </ion-item>
+                <ion-item [routerLink]='"reklama"'>
+                    <ion-label class='title'>Рекламация</ion-label>
+                </ion-item>
             </a>
 
             <a href="Basket.html">
-            <ion-item [routerLink]='"basket"'>
-                <ion-label class='title'>Корзина</ion-label>
-            </ion-item>
+                <ion-item [routerLink]='"basket"'>
+                    <ion-label class='title'>Корзина</ion-label>
+                </ion-item>
             </a>
 
             <a href="Agreement.html">
-            <ion-item [routerLink]='"/agreement"'>
-                <ion-label class='title'>Пользовательское соглашение</ion-label>
-            </ion-item>
+                <ion-item [routerLink]='"/agreement"'>
+                    <ion-label class='title'>Пользовательское соглашение</ion-label>
+                </ion-item>
             </a>
 
 
         </ion-list>
+
     </ion-content>
+    <ion-tab-bar slot="bottom">
+
+        <a href="Flowers.html" class="custom-tab-button">
+            <img src="assets/rose-outline.svg" class="tab-img">
+            <ion-label>Цветы</ion-label>
+        </a>
+
+        <a href="News.html" class="custom-tab-button">
+            <img src="assets/newspaper-outline.svg" class="tab-img">
+            <ion-label>Новости</ion-label>
+        </a>
+
+        <ion-tab-button (click)='scanCode()' class="skan-button" tab="skaner">
+            <img src="assets/scan.png" alt="">
+            <ion-label class="skan-label">Сканировать</ion-label>
+
+        </ion-tab-button>
+
+        <a href="History.html" class="custom-tab-button">
+            <img src="assets/time-outline.svg" class="tab-img">
+            <ion-label>История</ion-label>
+        </a>
+
+        <a href="MenuAuth.html" class="custom-tab-button">
+            <img src="assets/menu-outline.svg" class="tab-img">
+            <ion-label>Меню</ion-label>
+        </a>
+    </ion-tab-bar>
 </body>
 
 </html>
