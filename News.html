@@ -10,12 +10,35 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@next/css/ionic.bundle.css" />
     <link rel="stylesheet" href="style.css">
     <style>
-        ion-content{
+        .tab-label {
+            font-size: 11px;
+        }
+
+        .custom-tab-button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-right: 10px;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+
+        .tab-img {
+            height: 30px;
+        }
+
+        a {
+            color: black;
+        }
+
+        ion-content {
             height: 80%;
         }
-        ion-card{
+
+        ion-card {
             width: 100%;
         }
+
         ion-card-title {
             font-size: 24px;
             color: #9acc0c;
@@ -27,24 +50,28 @@
 
         .panel {
             padding-left: 20px;
-            
+
         }
-        .panel p{
+
+        .panel p {
             margin: 0;
         }
 
         .hide {
             display: none;
         }
-        .button-icon{
+
+        .button-icon {
             margin-left: 57%;
         }
-        .about-button{
+
+        .about-button {
             font-size: 18px;
         }
+
         .button-icon-hide {
-    margin-left: 70%;
-}
+            margin-left: 70%;
+        }
     </style>
 </head>
 
@@ -75,11 +102,12 @@
                             мы работаем с 10:00 до 20:00 без перерывов и выходных
                         </p>
                     </div>
-                 
-                 <ion-button onclick="accordion('panel','first-acc')" class="about-button" id='first-acc' expand="full" fill="solid" shape="fill">
-                    Подробнee
-                    <ion-icon slot="end" name="chevron-forward-outline" class="button-icon"></ion-icon>
-                 </ion-button>
+
+                    <ion-button onclick="accordion('panel','first-acc')" class="about-button" id='first-acc'
+                        expand="full" fill="solid" shape="fill">
+                        Подробнee
+                        <ion-icon slot="end" name="chevron-forward-outline" class="button-icon"></ion-icon>
+                    </ion-button>
 
                 </ion-card>
             </ion-item>
@@ -96,11 +124,12 @@
                             мы работаем с 10:00 до 20:00 без перерывов и выходных
                         </p>
                     </div>
-                 
-                 <ion-button onclick="accordion('panel-sec','second-acc')" class="about-button" id='second-acc' expand="full" fill="solid" shape="fill">
-                    Подробнee
-                    <ion-icon slot="end" name="chevron-forward-outline" class="button-icon"></ion-icon>
-                 </ion-button>
+
+                    <ion-button onclick="accordion('panel-sec','second-acc')" class="about-button" id='second-acc'
+                        expand="full" fill="solid" shape="fill">
+                        Подробнee
+                        <ion-icon slot="end" name="chevron-forward-outline" class="button-icon"></ion-icon>
+                    </ion-button>
                 </ion-card>
             </ion-item>
         </ion-list>
@@ -146,7 +175,7 @@
             } else {
                 panel.classList.remove('hide')
             }
-            if (accBtn.innerHTML.includes('Подробнee') ==true) {
+            if (accBtn.innerHTML.includes('Подробнee') == true) {
                 accBtn.innerHTML = "Скрыть  <ion-icon slot='end' name='chevron-up-outline' class='button-icon-hide'></ion-icon>"
             } else {
                 accBtn.innerHTML = "Подробнee <ion-icon slot='end' name='chevron-forward-outline' class='button-icon'></ion-icon>"

@@ -16,6 +16,27 @@
         window.modalController = modalController;
     </script>
     <style>
+        .tab-label {
+            font-size: 11px;
+        }
+
+        .custom-tab-button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-right: 10px;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+
+        .tab-img {
+            height: 30px;
+        }
+
+        a {
+            color: black;
+        }
+
         .sc-ion-buttons-md-s .button-has-icon-only.button-clear {
             --padding-top: 12px;
             --padding-end: 12px;
@@ -194,9 +215,11 @@
     <ion-header>
         <ion-toolbar class="toolbar">
             <ion-buttons slot="end">
-                <a href="Basket.html"><ion-button [routerLink]='"basket"'>
-                    <ion-icon class="flower-icon" slot="icon-only" name="cart-outline"></ion-icon>
-                </ion-button></a>
+                <a href="Basket.html">
+                    <ion-button [routerLink]='"basket"'>
+                        <ion-icon class="flower-icon" slot="icon-only" name="cart-outline"></ion-icon>
+                    </ion-button>
+                </a>
             </ion-buttons>
             <ion-title class="header">
                 <div class="header-wrapper">Цветы</div>
@@ -300,7 +323,7 @@
             </ion-fab-button>
         </ion-fab>
 
-    
+
     </ion-content>
     <ion-tab-bar slot="bottom">
 
@@ -421,11 +444,11 @@
             segment.scrollBy({ left: 150, behavior: "smooth" })
             document.getElementById('prev-button').classList.remove('hide-button')
             //отображение или скрытие кнопки
-            if ( segment.scrollWidth - segment.scrollLeft <= 460) {
+            if (segment.scrollWidth - segment.scrollLeft <= 460) {
                 document.getElementById('next-button').classList.add('hide-button')
             }
         }
-       
+
         //прокрутка влево
         let minus = () => {
             document.getElementById('next-button').classList.remove('hide-button')
